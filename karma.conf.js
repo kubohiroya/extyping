@@ -4,6 +4,7 @@ module.exports = function (config) {
   config.set({
 
     browsers: ['PhantomJS'],
+    // browsers: ['Chrome'],
 
     singleRun: !!process.env.CI,
 
@@ -26,6 +27,7 @@ module.exports = function (config) {
       require("karma-mocha"),
       require("karma-mocha-reporter"),
       require("karma-phantomjs-launcher"),
+      require("karma-chrome-launcher"),
       require("karma-sourcemap-loader")
     ],
 
@@ -38,7 +40,12 @@ module.exports = function (config) {
       module: {
         rules: [
           { test: /\.(jpe?g|png|gif|svg)$/, loader: 'url', options: { limit: 10240 } },
-          { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
+          { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader',
+            query: {
+              presets: ['es2016'],
+              plugins: ['babel-plugin-espower']
+            }
+          },
           { test: /\.less$/, loader: 'style-loader!css-loader!less-loader' },
           {
             test: /\.scss$/,

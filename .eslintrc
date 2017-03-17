@@ -42,7 +42,8 @@
     "no-console": "off",
     "no-alert": "off",
     "max-len": ["error", 120],
-    "indent": ["error", 2, {"SwitchCase": 1}]
+    "indent": ["error", 2, {"SwitchCase": 1}],
+    "jsx-a11y/no-static-element-interactions": "off"
   },
   "plugins": [
     "react",
@@ -69,5 +70,6 @@
     "__DLLS__": true,
     "socket": true,
     "webpackIsomorphicTools": true
-  }
+  },
+  "fix": true
 }

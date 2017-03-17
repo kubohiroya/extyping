@@ -9,3 +9,5 @@ export NotFound from './NotFound/NotFound';
 // export Register from './Register/Register';
 // export Survey from './Survey/Survey';
 // export Widgets from './Widgets/Widgets';
+
+export Practice from './Practice/Practice';

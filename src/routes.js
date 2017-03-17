@@ -77,6 +77,13 @@ export default store => {
           System.import('./containers/Widgets/Widgets')
         )}
       />
+      <Route
+        path="practice"
+        getComponent={() => injectReducerAndRender(
+          { practice: System.import('./redux/modules/practice') },
+          System.import('./containers/Practice/Practice')
+        )}
+      />
       <Route path="chat" getComponent={() => System.import('./containers/Chat/Chat')} />
 
       {/* Catch all route */}

@@ -6,6 +6,7 @@ import auth from './modules/auth';
 import notifs from './modules/notifs';
 import counter from './modules/counter';
 import info from './modules/info';
+import inputField from './modules/inputField';
 // import widgets from './modules/widgets';
 // import survey from './modules/survey';
 // import chat from './modules/chat';
@@ -24,6 +25,13 @@ export default function createReducers(asyncReducers) {
       counter3: counter
     }),
     info,
+    inputField,
+    /*
+    practice: multireducer({
+      inputField1: inputField,
+      inputField2: inputField,
+    }),
+    */
     // widgets,
     // survey,
     // chat,

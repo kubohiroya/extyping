@@ -1,0 +1,30 @@
+.inputField {
+
+  font-size: 32px;
+
+  @keyframes show {
+    0% { color: red; opacity:0.5;}
+    100% { color: black; opacity:1.0;}
+  }
+
+  span{
+    span{
+      animation: show 2.0s ease;
+    }
+    border-left: 1px solid #ffffff;
+  }
+}
+
+.cursor {
+  @keyframes blink {
+    0% { border-left: 1px solid #ff0000; }
+    25% { border-left: 1px solid #ff0000; }
+    75% { border-left: 1px solid #ffffff; }
+    100% { border-left: 1px solid #ffffff; }
+  }
+  animation: blink 0.8s infinite;
+}
+
+._cursor {
+  border-left: 1px solid #ff0000;
+}
